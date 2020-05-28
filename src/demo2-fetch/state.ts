@@ -13,6 +13,11 @@ export const usersState = selector({
   },
 });
 
+export const userFilterState = atom({
+  key: "userFilterState",
+  default: null,
+});
+
 export const friendsState = selector({
   key: "friendsSelector",
   get: async ({ get }) => {

@@ -7,8 +7,14 @@ import FetchDemo from "./demo2-fetch";
 ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
-      <CounterDemo />
-      {/* <FetchDemo /> */}
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div style={{ width: "200px" }}>
+          <CounterDemo />
+        </div>
+        <div style={{ width: "200px" }}>
+          <FetchDemo />
+        </div>
+      </div>
     </RecoilRoot>
   </React.StrictMode>,
   document.getElementById("root")

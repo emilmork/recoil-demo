@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import { CounterContext } from "../context";
+import { useRecoilState } from "recoil";
+import { countState } from "../state";
 
 const CounterButton: React.FunctionComponent = () => {
-  const { dispatch } = useContext(CounterContext);
+  const [count, setCount] = useRecoilState(countState);
 
-  return <button onClick={() => dispatch({ type: "INCREMENT" })}>+</button>;
+  return <button onClick={() => setCount(count + 1)}>+</button>;
 };
 
 export default CounterButton;
